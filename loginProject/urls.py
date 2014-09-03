@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('pessas.views',
+urlpatterns = patterns('pessoas.views',
     url(r'^$', 'index'),
     url(r'^login/$', 'login'),
     url(r'^validar/$', 'validar'),
