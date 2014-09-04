@@ -30,4 +30,11 @@ def validar(request):
 		else:
 			return HttpResponseRedirect('/login/')
 
+def logoff(request):
+		logout(request)
+		return HttpResponseRedirect('/')
+
+@login_required()
+def dashboard(request):
+		render(request, 'dashboard.html')
 # Create your views here.
