@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponseRedirect
 from pessoas.forms import PessoaForm, LoginForm
 from django.contrib.auth import authenticate, logout, login as meu_login
 from django.contrib.auth.decorators import login_required
+from pessoas.models import Pessoa
+from django.core.mail import send_mail
 
 def index(request):
 		return render(request, 'index.html')
