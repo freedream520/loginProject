@@ -58,7 +58,7 @@ def cadastro_validar(request):
 	            pessoa.set_password(form.data['senha'])
 	            pessoa.save()
 	            
-	            if send_mail('Campo assunto ', 'Valide o seu email: http://unifran-78230.sae1.nitrousbox.com/token/'+str(pessoa.pk), 'testeunifran@bol.com.br',
+	            if send_mail('Campo assunto ', 'Valide o seu email:'+str(pessoa.pk), 'roodrigoprogrammer@gmail.com',
 	    [pessoa.email], fail_silently=False):
 	                return render(request,'cadastro.html',{'form':form})
 
