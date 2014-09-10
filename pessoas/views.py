@@ -58,10 +58,8 @@ def cadastro_validar(request):
 	            pessoa.set_password(form.data['senha'])
 	            pessoa.save()
 	            
-	            if send_mail('Campo assunto Aqui', 'Valide o seu email: http://unifran-78230.sae1.nitrousbox.com/token/'+str(pessoa.pk), 'testeunifran@bol.com.br',
+	            if send_mail('Campo assunto ', 'Valide o seu email: http://unifran-78230.sae1.nitrousbox.com/token/'+str(pessoa.pk), 'testeunifran@bol.com.br',
 	    [pessoa.email], fail_silently=False):
-	                # Se der erro ele avisa aqui.
-	                # Retornar tela de sucesso! Vc Consegue fazer e tb arrumar esses códigos?
 	                return render(request,'cadastro.html',{'form':form})
 
 def token(request, numero):
