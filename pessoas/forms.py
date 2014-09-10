@@ -10,3 +10,7 @@ class LoginForm(forms.Form):
 		login = forms.CharField(max_length=100, required=True)
 		senha = forms.CharField(widget=forms.PasswordInput, required=True)
 
+class cadastroForm(forms.Form):
+    login = forms.CharField(max_length=100, required=True)
+    senha = forms.CharField(widget=forms.PasswordInput, required=True)
+    email = forms.CharField(max_length=100, required=True)
