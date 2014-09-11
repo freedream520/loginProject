@@ -58,9 +58,9 @@ def cadastro_validar(request):
 	            pessoa.set_password(form.data['senha'])
 	            pessoa.save()
 	            
-	            if send_mail('Campo assunto ', 'Valide o seu email:'+str(pessoa.pk), 'roodrigoprogrammer@gmail.com',
-	    [pessoa.email], fail_silently=False):
-	                return render(request,'cadastro.html',{'form':form})
+	            #if send_mail('Campo assunto ', 'Valide o seu email:'+str(pessoa.pk), 'roodrigoprogrammer@gmail.com',
+	    #[pessoa.email], fail_silently=False):
+	            return render(request,'cadastro.html',{'form':form})
 
 def token(request, numero):
 	    pessoa = Pessoa.objects.get(pk=numero)
