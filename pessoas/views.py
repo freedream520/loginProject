@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect
-from pessoas.forms import PessoaForm, LoginForm
+from pessoas.forms import PessoaForm, LoginForm, cadastroForm
 from django.contrib.auth import authenticate, logout, login as meu_login
 from django.contrib.auth.decorators import login_required
 from pessoas.models import Pessoa
