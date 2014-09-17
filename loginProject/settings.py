@@ -72,7 +72,12 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
+LANGUE = (
+    ('pt-br', 'Brasil'),
+    ('en', 'Estados Unidos'),
+    ('es', 'Espanha'),
+)
 
 TIME_ZONE = 'UTC'
 
