@@ -9,6 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 def index(request):
 		recado = _('Ola, voce esta no site certo!')
 		return render(request, 'index.html',{'recado':recado,})
+		
 def index(request):
 		return render(request, 'index.html')
 
