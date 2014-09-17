@@ -18,3 +18,25 @@
 <br />
 
 <a href="/cadastro/">Cadastrar!</a>
+
+<a href="#" onclick="document.setLangEnglish.submit();return false;">English</a>
+<form name="setLangEnglish" action="/i18n/setlang/" method="POST">
+		{% csrf_token %}
+		<input name="next" type="hidden" value="/"/>
+		<input name="next" type="language" value="en"/>
+</form>
+
+<a href="#" onclick="document.setLangPortugues.submit();return false;">Português</a>
+<form name="setLangPortugues" action="/i18n/setlang/" method="POST">
+		{% csrf_token %}
+		<input name="next" type="hidden" value="/"/>
+		<input name="next" type="language" value="pt-br"/>
+</form>
+
+<br/>
+Tradução vinda do Django: {{recado}}
+<br/>
+Tradução direto no Template: {% trans "Olá turma do mal!" %}
+<br/>
+Tradução direto no Template (Bloco): {% blocktrans %}Esse é o bloco de conteúdo!{% endblocktrans %}
+<br/>
