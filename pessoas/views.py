@@ -9,7 +9,7 @@ from django.utils.translation import ugettext_lazy as _
 def index(request):
 		recado = _('Ola, voce esta no site certo!')
 		return render(request, 'index.html',{'recado':recado,})
-		
+
 def index(request):
 		return render(request, 'index.html')
 
@@ -62,11 +62,9 @@ def cadastro_validar(request):
 	            )
 	            pessoa.set_password(form.data['senha'])
 	            pessoa.save()
-	            #print('http://127.0.0.1:8000/token/'+str(pessoa.pk))
+	            print('http://127.0.0.1:8000/token/'+str(pessoa.pk))
 	            if send_mail('Campo assunto ', 'Valide o seu email: http://127.0.0.1:8000/cadastro_validar/token/'+str(pessoa.pk), 'roodrigoprogrammer@gmail.com',
 	    [pessoa.email], fail_silently=True):]
-	            #if send_mail('Campo assunto ', 'Valide o seu email: http://127.0.0.1:8000/cadastro_validar/token/'+str(pessoa.pk), 'roodrigoprogrammer@gmail.com',
-	    #[pessoa.email], fail_silently=False):]
 	                return render(request,'cadastro.html',{'form':form})
             	return render(request,'index.html',{'form':form})
 
