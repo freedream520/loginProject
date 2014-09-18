@@ -19,7 +19,7 @@ msgstr ""
 
 #: pessoas/views.py:10
 msgid "Ola, voce esta no site certo!"
-msgstr ""
+msgstr "Hi you"
 
 #: pessoas/templates/index.html:39
 msgid "Olá turma do mal!"
