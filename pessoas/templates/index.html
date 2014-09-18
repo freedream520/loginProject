@@ -1,3 +1,4 @@
+{% load i18n %}
 <h1>INDEX</h1>
 
 <br />
@@ -18,19 +19,20 @@
 <br />
 
 <a href="/cadastro/">Cadastrar!</a>
-
+<br />
+<br />
+<br />
 <a href="#" onclick="document.setLangEnglish.submit();return false;">English</a>
 <form name="setLangEnglish" action="/i18n/setlang/" method="POST">
 		{% csrf_token %}
 		<input name="next" type="hidden" value="/"/>
-		<input name="next" type="language" value="en"/>
+		<input name="language" type="hidden" value="en"/>
 </form>
-
 <a href="#" onclick="document.setLangPortugues.submit();return false;">Português</a>
 <form name="setLangPortugues" action="/i18n/setlang/" method="POST">
 		{% csrf_token %}
 		<input name="next" type="hidden" value="/"/>
-		<input name="next" type="language" value="pt-br"/>
+		<input name="language" type="hidden" value="pt-br"/>
 </form>
 
 <br/>
